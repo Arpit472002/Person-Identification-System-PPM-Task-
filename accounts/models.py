@@ -10,6 +10,7 @@ from rest_framework.authtoken.models import Token
 class MyUser(AbstractUser):
     user_id   = models.AutoField(primary_key=True)
     username=models.CharField(max_length=200,unique=True)
+    is_manager=models.BooleanField(default=False)
     USERNAME_FIELD='username'
     REQUIRED_FIELDS=[]
     
